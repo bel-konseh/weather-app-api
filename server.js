@@ -1,11 +1,15 @@
 import express from "express"
+import cors from "cors"
 import { db } from "./config/db.js"
 import { router } from "./routes/weather-routes.js"
 
-import 'dotenv/config'
-const myDb = db
 
+import 'dotenv/config'
+
+const myDb = db
+app.use(cors())
 const app = express()
+app.use()
 app.use(express.json())
 
 app.use('/weather', router)
