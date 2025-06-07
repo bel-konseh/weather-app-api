@@ -7,9 +7,10 @@ import { router } from "./routes/weather-routes.js"
 import 'dotenv/config'
 
 const myDb = db
-app.use(cors())
+
 const app = express()
-app.use()
+app.use(cors())
+
 app.use(express.json())
 
 app.use('/weather', router)
